@@ -8,6 +8,8 @@ use \Slim\Slim;
 //esse caminho esta declarado no json na pata ecommerce
 use \Hcode\Page;
 
+use \Hcode\PageAdmin;
+
 
 $app = new Slim();
 
@@ -29,6 +31,19 @@ $page->setTpl("index");
 
 
 });
+
+
+$app->get('/admin', function() {
+    
+  
+$page = new PageAdmin();
+
+$page->setTpl("index");
+
+
+});
+
+
 
 $app->run();
 
